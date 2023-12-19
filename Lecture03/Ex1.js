@@ -19,7 +19,7 @@ for( let i = 0; i < value.length; i++){
             }
             else if(value[i][n] === value[index][j]){ //01 12
                 
-                console.log(`value${index} = value${i+index} =  ${value[i][n]}`)
+                console.log(`value${index} = value${i+2} =  ${value[i][n]}`)
             }
         }
     }
