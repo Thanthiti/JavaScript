@@ -1,20 +1,24 @@
+
 class media{
-    constructor (info){
+    constructor (info,ew){
         this.publishdate = info.publishdate
-        this.name = info.name
+        this.names = ew.names
     }
 }
 
+
 class Song extends media{
-    constructor(SongData){
-        super(SongData)
+    constructor(SongData,aa){
+        super(SongData,aa)
         this.artist = SongData.artist
     }
 }
-
 const mysong = new Song({
     artist:"Radiohead",
     name : "Creep",
-    publishdate: 1975.
+    publishdate: 1975
+},{
+    names : "Thanthiti",
+    
 })
 console.log(mysong)

@@ -1,8 +1,8 @@
 function Critialcode(){
-    throw "throwing an expeption"
+    throw "throwing an expeptionssss"
 }
-function logError(theexpetion){
-    console.log(theexpetion)
+function logError(theexpepion){
+    console.log(theexpepion)
 }
 
 console.log("\n------------try..Catch----------------\n")

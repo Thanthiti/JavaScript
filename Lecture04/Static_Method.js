@@ -1,21 +1,24 @@
-class dog{
+class dogs{
     constructor(name){
         this.name = name
+    }
+    static bark(){
+        console.log("Woof!" )
     }
 
     introduction(){
         console.log("this is " + this.name + " ! ")
     }
 
-    static bark(){
-        console.log("Woof!")
-    }
+    
 
     
     
 }
 
-const myDog = new dog("Buster")
-myDog.introduction();
+const myDog = new dogs("Buster")
 
-dog.bark();
+myDog.introduction();
+//myDog.bark()
+
+dogs.bark();

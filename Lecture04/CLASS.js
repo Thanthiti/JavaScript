@@ -8,7 +8,9 @@ class Song{
     }
 }
 
-const mySong = new Song("tom york","Black star")
+const mySong = new Song("black star","Rdiohead")
+
+console.log(mySong.title)
 mySong.play()
 
     

@@ -1,7 +1,7 @@
 let value1 = ['Apple',1,true]//0
 
-let value2 = ['frise',2,true] //1
-let value3 = ['Mars',2,'Apple'] //2
+let value2 = [true,'frise',2] //1
+let value3 = [2,'Apple','Mars'] //2
 
 let value = [value1,value2,value3 ]
 

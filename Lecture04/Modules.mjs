@@ -10,4 +10,4 @@ function CalSqr(w,l){
     return w,l
 }
 
-export { CalSqr,calCircle,CalTriangle}
+export  { CalSqr,calCircle,CalTriangle}

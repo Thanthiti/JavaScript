@@ -1,3 +1,4 @@
+/*
 const animals = ["Ant", 'Bat', 'Cat', 'Dog']
 let a=  0
 animals.forEach((i) =>{
@@ -5,3 +6,7 @@ animals.forEach((i) =>{
     console.log(animals[a++])
 })
 console.log(a)
+*/
+
+let str = "THanthiti"
+console.log(str.length)
