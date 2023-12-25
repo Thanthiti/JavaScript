@@ -11,11 +11,12 @@ promiseTimeout(2000)
 })
 .then(()=>{
     console.log("Also Done!")
-    return Promise.resolve(42)
+    return Promise.reject(422)
 })
-.then(()=>{
+.then((result)=>{
     console.log(result)
 })
-.catch(()=>{
+.catch((result)=>{
+    console.log(result)
     console.log("Eror!")
 })
