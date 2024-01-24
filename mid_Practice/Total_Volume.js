@@ -1,16 +1,13 @@
 function totalvolume(...args){
     let sum 
     let result = 0
-    let results = 0
     for(let i of args){
         sum = 1
         for(let n = 0;n < i.length;n++){
             sum = sum *  i[n]
         }
         result+= sum
-       
     }
-   
     console.log(result)
 }
 

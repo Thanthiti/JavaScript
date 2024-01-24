@@ -11,12 +11,12 @@ function simplePair(Arr,num){
             }
         }
     }
-    console.log(result + "Asd")
+    console.log(result)
     
     return result
 }
 
 
 simplePair([1,2,3],3)
-simplePair([1,2,3,6],6)
+simplePair([1,2,3],6)
 simplePair([1,2,3],9)

@@ -1,39 +1,27 @@
-function isValidation(validip){
+function isValidIP(validip){
     let ip = validip.split(".")
-    let numberip 
-    let status = false
-    console.log(ip)
-    
+    let status = false 
 
-    if(ip.length < 5 && ip.length >= 4){
-        
-        for(let i = 0;i < ip.length;i++){
-
-            numberip = parseInt(ip[i])
-
-            if(numberip > 1 && numberip < 255){
+    if(ip.length == 4){
+        for(let i of ip){
+            const IPs = parseInt(i)
+            if(IPs <= 255 && IPs >= 1 && i[0] != "0" && i[i.length-1] != '0'){
                 status = true
-                if(ip[i][0] === "0"){
-                    status = false
-                    break
-                    
-                }
-
-            }else{
+            }
+            else {
                 status = false
-               break
+                break
             }
         }
-
     }
 
-    else{
-        status = false
-        
-    }
-    console.log(status)
+    return status
 }
 
-isValidation("123.45.67.89")
-isValidation("123.456.67.89")
-isValidation("123.056.67.90")
+
+console.log(isValidIP("1.2.3.4"));
+console.log(isValidIP("1.2.3.4.4"));
+console.log(isValidIP("1.2.3"));
+console.log(isValidIP("123.45.67.89"));
+console.log(isValidIP("123.456.78.90"));
+console.log(isValidIP("123.045.067.089"));
