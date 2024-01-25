@@ -1,54 +1,25 @@
+function findWords (words, characters) {
 
-function sortStr(words){
-    let value = 0
-    let Arrvalue = [words.length] 
-    let temp 
     
-    for(let i = 0; i < words.length;i++){
-       value = 0 
-        for(let ch of words[i]){
-            value += ch.charCodeAt()
-        }
-        Arrvalue[i] = value
-    }
+    const validWords = words.filter(word => {
+        console.log(word +   "   sdsd")
+      return word.split('').every(char => characters.includes(char));
+    });
+
     
-    for(let i = 1 ;i <= words.length;i++){
-        if(Arrvalue[i] > Arrvalue[i-1]){
+  
+    const sortedWords = validWords.sort((a, b) => {
+        const sumA = a.split('');
+        console.log(sumA.reduce((sum, char) => sum + char.charCodeAt(0), 0))
+        //console.log(b.reduce((sum, char) => sum + char.charCodeAt(0), 0))
 
-            //swap Acsii
-            temp = Arrvalue[i-1]
-            Arrvalue[i-1] = Arrvalue[i]  
-            Arrvalue[i] = temp
-
-            //swap Words
-            temp = words[i-1]
-            words[i-1] = words[i]
-            words[i] = temp
- 
-        }
-    }
-}
-
-function findWords(words, chars) {
-    let ArrWorld = []
-    let index = 0 
-    
-    for(let i = 0;i < words.length;i++){
-        let result = ""
-
-        for(let ch of words[i]){
-            
-            for(let n = 0; n < chars.length;n++) {
-                if(ch === chars[n]) result += chars[n]
-
-            }
-
-            if(result == words[i]) ArrWorld[index++] = result
-        }
-    }
-    
-    sortStr(ArrWorld)    
-    return ArrWorld
+        console.log(a + " a")
+        console.log(b + " b")
+      const sumB = b.split('').reduce((sum, char) => sum + char.charCodeAt(0), 0);
+      return sumB - sumA;
+    });
+  
+    return sortedWords;
 }
 
 const words = ["cherry", "date", "honeydew", "orange", "papaya"];
